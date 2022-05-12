@@ -24,7 +24,7 @@
 #include <Wire.h>
 #endif
 
-#define DEVICE_TYPE 12538
+#define DEVICE_TYPE 10039
 #define FIRMWARE_VERSION "1.0.0"
 
 U8G2_SSD1327_MIDAS_128X128_1_HW_I2C u8g2(U8G2_R0, /* reset=*/ U8X8_PIN_NONE);  /* Uno: A4=SDA, A5=SCL, add "u8g2.setBusClock(400000);" into setup() for speedup if possible */
