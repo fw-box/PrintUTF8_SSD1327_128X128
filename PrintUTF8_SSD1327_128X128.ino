@@ -25,7 +25,7 @@
 #endif
 
 #define DEVICE_TYPE 10039
-#define FIRMWARE_VERSION "1.0.1"
+#define FIRMWARE_VERSION "1.0.2"
 
 U8G2_SSD1327_MIDAS_128X128_1_HW_I2C u8g2(U8G2_R0, /* reset=*/ U8X8_PIN_NONE);  /* Uno: A4=SDA, A5=SCL, add "u8g2.setBusClock(400000);" into setup() for speedup if possible */
 
@@ -49,12 +49,14 @@ void loop(void) {
     u8g2.setCursor(0, 40);
     u8g2.print("你好世界");		// Chinese "Hello World" 
     //u8g2.print("こんにちは世界");    // Japanese "Hello World" 
-    delay(5);
+    //delay(5);
     u8g2.setCursor(0, 40+25);
     u8g2.print(String("PIN_A = ") + analogRead(PIN_A));
-    delay(5);
+    //delay(5);
     u8g2.setCursor(0, 40+25+25);
     u8g2.print(String("PIN_D = ") + digitalRead(PIN_D));
+    u8g2.setCursor(0, 40+25+25+25);
+    u8g2.print(FIRMWARE_VERSION);
   } while ( u8g2.nextPage() );
   //delay(10);
 }
